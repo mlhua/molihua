@@ -13,24 +13,19 @@
     }
 
     body {
-      width: 1200px;
+      width: 1000px;
       height: 1050px;
-      background: url(2.png);
+      background: url(1.jpg);
       background-size: cover;
     }
 
-    textarea {
-      width: 200px;
-      height: 25px;
-      border: 2px rgb(118, 201, 66) solid;
-      /* 不设置轮廓 */
-      outline: none;
-      /* 设置其不能改变长宽 */
+    .a {
       resize: none;
       position: relative;
       top: 605px;
-      right: -900px;
-      font-size: 20px;
+      right: -850px;
+      color: rgb(234, 82, 82);
+      font-size: 50px;
     }
 
     li {
@@ -55,66 +50,67 @@
       position: relative;
       top: -100px;
     }
+    .com {
+      color: rgb(190, 215, 78);
+      font-size: 20px;
+    }
+    .shi {
+      color: rgb(223, 71, 71);
+      font-size: 25px;
+      background-color: azure;
+    }
   </style>
 
   <body>
-    <div style="position: relative; top: 800px">
-      <audio src="1.mp3" controls="controls" loop autoplay>
-        Your browser does not support the audio element.
-      </audio>
-      <audio src="5.mp3" autoplay>
+    <div style="position: relative; top: 850px">
+      <audio src="6.mp3" controls loop autoplay>
         Your browser does not support the audio element.
       </audio>
     </div>
-    <textarea></textarea>
-    <button
-      style="
-        position: relative;
-        top: 598px;
-        right: -900px;
-        height: 25px;
-        font-size: 15px;
-      "
-    >
-      发布
-    </button>
+    <p class="a">Molihua个人网址</p>
 
-    <div class="box"><ul></ul></div>
+    <div class="box">
+      <a class="com" href="https://www.bilibili.com/"> <小破站></a>
+
+      <a class="com" href="https://www.baidu.com/"><神婆></a>
+      <a class="com" href="https://www.toutiao.com/"><神棍><br /></a>
+
+      <a class="com" href="https://www.csdn.net/?spm=1001.2101.3001.4476"
+        ><文字大学></a
+      >
+      <a class="com" href="https://open.163.com/"><视频大学><br /></a>
+      <a class="com" href="https://translate.google.cn/"><翻译官></a>
+
+      <a class="com" href="https://www.vvvdj.com/"><清风DJ网><br /></a>
+      <a class="com" href="https://www.555dy.me/"><电影></a>
+      <a class="com" href="https://bz.zzzmh.cn/index/"><壁纸></a>
+      <a class="com" href="https://music.y444.cn/#/"><下歌><br /></a>
+
+      <div>
+        <p class="shi" style="position: relative; top: 200px">
+          ！~~学识泰山重--
+        </p>
+        <p class="shi" style="position: relative; top: 200px">
+          ！~~人可斗星河--
+        </p>
+      </div>
+    </div>
     <!--左边大盒子-->>
 
-    <div id="Main" style="position: relative; left: 750px; top: -200px"></div>
-    <!--时间-->>
+    <div
+      id="Main"
+      style="
+        position: relative;
+        top: -200px;
+        left: 600px;
+        font-size: 50px;
+        color: rgb(225, 76, 76);
+      "
+    ></div>
+    <!--时间-->
 
     <script>
       //1、获取元素
-      var txt = document.querySelector("textarea");
-      var btn = document.querySelector("button");
-      var ul = document.querySelector("ul");
-      var time;
-      alert("此网站只用于个人学习");
-      //2、给button绑定点击事件
-      btn.onclick = function () {
-        if (txt.value == "") {
-          //当文本框中没有文字时，提示
-          alert("您没有输入内容");
-        } else {
-          //创建元素li作为留言区
-          var li = document.createElement("li");
-
-          //将文本框中的内容放到li中,a标签中href中的内容代表什么都不执行
-          li.innerHTML = txt.value + "</br>" + time;
-          txt.value = ""; //添加之后文本框的内容清空
-          //将留言添加到ul中，而且在最上方
-          ul.insertBefore(li, ul.children[0]);
-          //循环给每个删除绑定事件
-          for (var i = 0; i < as.length; i++) {
-            as[i].onclick = function () {
-              //删除当前a标签所在位置的父节点li
-              ul.removeChild(this.parentNode);
-            };
-          }
-        }
-      };
       window.onload = function () {
         window.requestAnimationFrame(getDate);
       };
